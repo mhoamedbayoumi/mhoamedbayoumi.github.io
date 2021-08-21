@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!--fontawesome cdn for modren icons-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <!--gsap for animation library-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollTrigger.min.js" defer></script>
+    <!--three js library-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
+    <script src="index.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!--model viewer cdn for 3d -->
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <title>home</title>
+    
+</head>
+<body>
+    <!-- create the nav bar -->
+    <nav>
+        <a href="index.html"><img src="./499-clipboard-film-clap-outline.gif"/></a>
+        <h1 id="logo" class="logo">moviehall</h1>
+        <ul>
+            <li><a href="search.html" style="text-decoration: none; color: whitesmoke;"><span>Search</span></a></li>
+            <li><a href="recomendation.html" style="text-decoration: none; color: whitesmoke;"><span>recomendation</span></a></li>    
+        </ul>
+        <div>
+            <i id="navicon" class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <!--hero section-->
+    <section id="main">
+        <img class="banner" id="banner" src="" alt="photo">
+        <div class="container">
+        <h1 id="movie-name" class="movie-name"></h1>
+        <h3 id="movie-desc" class="movie-desc"></h3>
+        <a class="movie-trailer" id="movie-trailer" onclick="go_trailer()">Trailer</a>
+        </div>
+    </section>
+    <!--trinding movie-->
+    <h1 class="trinding">Trinding Now</h1>
+    <section class="trinding-row" id="trinding-row">
+    </section>
+    <!--trinding series section -->
+    <h1 class="series-header">Trinding Series</h1>
+    <section class="trinding-series-row" id="trinding-series-row">
+
+    </section>
+    <!--top rated section-->
+    <h1 class="top">Top Rated</h1>
+    <section id="top-rated-row" class="top-rated-row">
+
+    </section>
+    <!--in theatres section-->
+    <h1 class="theatres">In Theatres</h1>
+    <section class="theatres-row" id="theatres-row">
+
+    </section>
+    <!--up coming movies section-->
+    <h1 class="upcoming"> UP Coming</h1>
+    <section class="upcoming-row" id="upcoming-row">
+
+    </section>
+    <section id="threeD">
+        <div><h1 class="header">Watch Amazing movies With PopCorn <span>MovieHall</span></h1></div>
+        <div><model-viewer id="modelviewer" src="scene.gltf" camera-controls></model-viewer></div>
+    </section>
+    <!-- footer-->
+    <footer>   
+        <div class="ABOUT">
+            <h1>ABOUT</h1>
+            <p> moviehall is movies platform help you keep up with new movies
+                with various of categories .</p>
+        </div>
+        <div class="icons">
+            <i  id="facebook" class="fab fa-facebook"></i>
+            <a href="https://github.com/mhoamedbayoumi?tab=repositories"><i id="github" class="fab fa-github"></i></a>
+            <i id="twitter" class="fab fa-twitter"></i>
+        </div>
+        <h5>Copyright &copy; 2017 All Rights Reserved by mohamed bayoumi</h5>
+    </footer>
+</body>
+</html>
